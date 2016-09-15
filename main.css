@@ -1,0 +1,148 @@
+/*
+GENERAL
+*/
+* {
+  box-sizing: border-box;
+  color #80aaff;
+}
+
+.border{
+  border: solid 2px #5d9cc3;
+}
+
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+/*
+SHIRT MENU
+*/
+
+.shirt-shop li{
+  float:left;
+  margin:30px;
+  position: relative;
+}
+
+.shirt-viewer img{
+  width: 262px;
+  height: auto;
+}
+
+.shirt img{
+  border: solid 2px #5d9cc3;
+  margin: -1px;
+  padding: 20px;
+}
+
+/*
+FLIP BUTTON
+*/
+
+.flip {
+  display: inline;
+  border: solid 2px #5d9cc3;
+  height: 23px;
+  width: 23px;
+  position: absolute;
+  margin:-1px;
+  right: 0;
+}
+
+.flip:hover {
+  background: #5d9cc3;
+  color: white;
+}
+
+.flip:hover span {
+  color: white;
+}
+
+.flip span {
+  margin: 9% 17%;
+  color: #5d9cc3;
+}
+
+/*
+MENU
+*/
+
+.menu ul li {
+  border: solid 2px #5d9cc3;
+  color: #5d9cc3;
+  margin: -1px;
+  width: 54px;
+  height: 40px;
+}
+
+.menu ul li:hover{
+  background: #5d9cc3;
+}
+
+.refresh span{
+  margin: 20% 37%;
+}
+
+.favorite span{
+    margin: 20% 34%;
+}
+
+.size span {
+  display: block;
+  font-family: helvetica;
+  font-weight: bold;
+  margin:19% 32%;
+}
+
+.color span {
+  transform: scale(1.8);
+  margin:18% 37%;
+}
+
+#blueshirt {
+  color: #72bbe9
+}
+
+#pinkshirt {
+  color: #e577aa;
+}
+
+#yellowshirt {
+  color: #e3b076;
+}
+
+.cart span{
+  transform: scale(1.2);
+  margin:17% 35%;
+}
+
+/*menu animation*/
+.refresh:hover span,
+.favorite:hover span,
+.size:hover span,
+.color:hover span,
+.cart:hover span {
+  color: white;
+}
+
+/*
+FOOTER
+*/
+
+.footer{
+  font-family: helvetica;
+  font-weight: lighter;
+  line-height: 33px;
+  font-size: 20px;
+  color: #5d9cc3;
+  margin: 0 10px;
+}
+
+.shirt-name {
+  float: left;
+}
+
+.price {
+  float: right;
+}
