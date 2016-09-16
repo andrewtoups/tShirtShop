@@ -3,11 +3,11 @@ GENERAL
 */
 * {
   box-sizing: border-box;
-  color #80aaff;
+  color: #5ca4d6;
 }
 
 .border{
-  border: solid 2px #5d9cc3;
+  border: solid 2px #5ca4d6;
 }
 
 ul{
@@ -31,7 +31,7 @@ SHIRT MENU
 }
 
 .shirt img{
-  border: solid 2px #5d9cc3;
+  border: solid 2px #5ca4d6;
   margin: -1px;
   padding: 20px;
 }
@@ -42,7 +42,7 @@ FLIP BUTTON
 
 .flip {
   display: inline;
-  border: solid 2px #5d9cc3;
+  border: solid 2px #5ca4d6;
   height: 23px;
   width: 23px;
   position: absolute;
@@ -51,7 +51,7 @@ FLIP BUTTON
 }
 
 .flip:hover {
-  background: #5d9cc3;
+  background: #5ca4d6;
   color: white;
 }
 
@@ -61,7 +61,7 @@ FLIP BUTTON
 
 .flip span {
   margin: 9% 17%;
-  color: #5d9cc3;
+  color: #5ca4d6;
 }
 
 /*
@@ -69,15 +69,15 @@ MENU
 */
 
 .menu ul li {
-  border: solid 2px #5d9cc3;
-  color: #5d9cc3;
+  border: solid 2px #5ca4d6;
+  color: #5ca4d6;
   margin: -1px;
   width: 54px;
   height: 40px;
 }
 
 .menu ul li:hover{
-  background: #5d9cc3;
+  background: #5ca4d6;
 }
 
 .refresh span{
@@ -96,12 +96,19 @@ MENU
 }
 
 .color span {
-  transform: scale(1.8);
-  margin:18% 37%;
+  /*transform: scale(1.2);*/
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  border: solid thin white;
+  box-sizing: content-box;
+  padding: 0;
+  line-height: 1;
+  border-width: 2px;
 }
 
 #blueshirt {
-  color: #72bbe9
+  color: #72bbe9;
 }
 
 #pinkshirt {
@@ -112,7 +119,11 @@ MENU
   color: #e3b076;
 }
 
-.cart span{
+#greenshirt {
+  color: #78adc3;
+}
+
+.cart span {
   transform: scale(1.2);
   margin:17% 35%;
 }
@@ -120,11 +131,145 @@ MENU
 /*menu animation*/
 .refresh:hover span,
 .favorite:hover span,
-.size:hover span,
-.color:hover span,
+.size:hover .size-default,
 .cart:hover span {
   color: white;
 }
+
+/*.size .sub-menu :hover span {
+  color: white;
+}*/
+
+/*
+SUBMENU
+*/
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 12.5px 0 12.5px;
+  border-color: #5ca4d6 transparent transparent transparent;
+  position: absolute;
+  bottom: -10px;
+  left: 24px;
+}
+
+.triangle-inset{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 9.5px 0 9.5px;
+  border-color: white transparent transparent transparent;
+  position: absolute;
+  bottom: 3px;
+  left: -9px;
+}
+
+.sub-menu {
+  background: white;
+  border: solid;
+  border-width: 2px;
+  width: 74px;
+}
+/*
+SIZE SUBMENU
+*/
+.size .sub-menu {
+  position:absolute;
+  bottom: 60px;
+  left: -11px;
+}
+
+.size .sub-menu ul li {
+  border: none;
+  width: 72px;
+  font-size: 20px;
+}
+
+.size ul li span {
+  color: #5ca4d6;
+  margin:0;
+  float: left;
+  position: absolute;
+}
+
+.size .sub-menu .size-label {
+  font-size: 8px;
+  position: absolute;
+  text-transform: uppercase;
+  top:6px;
+  left: 11px;
+}
+
+.size .extra-large {
+  transform: scale(1.8);
+  position: absolute;
+  top: 3px;
+  left: 11px;
+}
+
+.size .extra-large .size-label {
+  position: absolute;
+  left:9;
+}
+
+.size .large {
+  transform: scale(1.5);
+  position: absolute;
+  top: 8px;
+  left: 15px;
+}
+
+.size .medium {
+  transform: scale(1.2);
+  position: absolute;
+  top: 8px;
+  left: 19px;
+}
+
+.size .small {
+  transform: scale(.9);
+  position: absolute;
+  top: 6px;
+  left: 23px;
+}
+
+/*SIZE SUB-MENU ANIMATION*/
+.sub-menu li:hover i,
+.sub-menu li:hover span {
+  color: white;
+}
+
+
+
+/*
+COLOR SUBMENU
+*/
+.color .sub-menu {
+  position:absolute;
+  bottom: 60px;
+  left: -13px;
+}
+
+.color .sub-menu span {
+  transform: scale(1.7);
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+.color .sub-menu ul li {
+  border: none;
+  width: 37px;
+}
+
+/*.size-menu ul li {
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 2px;
+}*/
+
 
 /*
 FOOTER
@@ -135,7 +280,7 @@ FOOTER
   font-weight: lighter;
   line-height: 33px;
   font-size: 20px;
-  color: #5d9cc3;
+  color: #5ca4d6;
   margin: 0 10px;
 }
 
