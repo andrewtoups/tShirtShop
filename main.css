@@ -57,6 +57,7 @@ FLIP BUTTON
 
 .flip:hover span {
   color: white;
+  cursor: pointer;
 }
 
 .flip span {
@@ -78,6 +79,7 @@ MENU
 
 .menu ul li:hover{
   background: #5ca4d6;
+  cursor: pointer;
 }
 
 .refresh span{
@@ -85,7 +87,7 @@ MENU
 }
 
 .favorite span{
-    margin: 20% 34%;
+  margin: 20% 34%;
 }
 
 .size span {
@@ -179,6 +181,9 @@ SIZE SUBMENU
   position:absolute;
   bottom: 60px;
   left: -11px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 250ms ease;
 }
 
 .size .sub-menu ul li {
@@ -241,7 +246,11 @@ SIZE SUBMENU
   color: white;
 }
 
-
+.size:hover .sub-menu {
+  bottom: 36px;
+  opacity: 1;
+  visibility: visible;
+}
 
 /*
 COLOR SUBMENU
@@ -250,6 +259,9 @@ COLOR SUBMENU
   position:absolute;
   bottom: 60px;
   left: -13px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 250ms ease;
 }
 
 .color .sub-menu span {
@@ -264,12 +276,13 @@ COLOR SUBMENU
   width: 37px;
 }
 
-/*.size-menu ul li {
-  border-top: solid;
-  border-bottom: solid;
-  border-width: 2px;
-}*/
+/*COLOR MENU ANIMATION*/
 
+.color:hover .sub-menu {
+  bottom: 36px;
+  opacity: 1;
+  visibility: visible;
+}
 
 /*
 FOOTER
