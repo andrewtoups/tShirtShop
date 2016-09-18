@@ -25,15 +25,61 @@ SHIRT MENU
   position: relative;
 }
 
-.shirt-viewer img{
-  width: 262px;
-  height: auto;
+.shirt-viewer {
+  perspective: 800px;
 }
 
-.shirt img{
+.shirt {
   border: solid 2px #5ca4d6;
+  width: 262px;
+  height: 254px;
   margin: -1px;
-  padding: 20px;
+  padding: 0px;
+  /*perspective: 800px;*/
+  position: relative;
+/*animation code*/
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.shirt .flipped {
+  transform: rotateY( 180deg );
+}
+
+.shirtfront, .shirtback {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+/*animation code*/
+  backface-visibility: hidden;
+}
+
+.shirt .shirtback {
+  transform: rotateY( 180deg );
+}
+
+#blueshirt .shirtfront {
+  background: url('images/blue-front.png') center / 84% no-repeat;
+}
+
+#blueshirt .shirtback {
+  background: url('images/blue-back.png') center / 84% no-repeat;
+}
+
+#pinkshirt .shirtfront {
+  background: url('images/pink-front.png') center / 84% no-repeat;
+}
+
+#pinkshirt .shirtback {
+  background: url('images/pink-back.png') center / 84% no-repeat;
+}
+
+#yellowshirt .shirtfront {
+  background: url('images/yellow-front.png') center / 84% no-repeat;
+}
+
+#yellowshirt .shirtback {
+  background: url('images/yellow-back.png') center / 84% no-repeat;
 }
 
 /*
@@ -48,7 +94,15 @@ FLIP BUTTON
   position: absolute;
   margin:-1px;
   right: 0;
+  z-index: 1;
 }
+
+.flip span {
+  margin: 9% 17%;
+  color: #5ca4d6;
+}
+
+/*FLIP ANIMATIONS*/
 
 .flip:hover {
   background: #5ca4d6;
@@ -60,10 +114,35 @@ FLIP BUTTON
   cursor: pointer;
 }
 
-.flip span {
-  margin: 9% 17%;
+.flip:active {
+  background: white;
+}
+
+.flip:active span {
   color: #5ca4d6;
 }
+
+/*.flip:active ~ #blueshirt {
+  background: url('images/blue-back.png') center white;
+  background-repeat: no-repeat;
+  background-size: 84%;
+  transform: rotate3d(0, 1, 0 90deg);
+  transition: transform 1s linear;
+}
+
+.flip:active ~ #pinkshirt {
+  background: url('images/pink-back.png') center white;
+  background-repeat: no-repeat;
+  background-size: 84%;
+}
+
+.flip:active ~ #yellowshirt {
+  background: url('images/yellow-back.png') center white;
+  background-repeat: no-repeat;
+  background-size: 84%;
+}*/
+
+
 
 /*
 MENU
@@ -75,11 +154,6 @@ MENU
   margin: -1px;
   width: 54px;
   height: 40px;
-}
-
-.menu ul li:hover{
-  background: #5ca4d6;
-  cursor: pointer;
 }
 
 .refresh span{
@@ -109,19 +183,19 @@ MENU
   border-width: 2px;
 }
 
-#blueshirt {
+#bluecolor {
   color: #72bbe9;
 }
 
-#pinkshirt {
+#pinkcolor {
   color: #e577aa;
 }
 
-#yellowshirt {
+#yellowcolor {
   color: #e3b076;
 }
 
-#greenshirt {
+#greencolor {
   color: #78adc3;
 }
 
@@ -131,12 +205,30 @@ MENU
 }
 
 /*menu animation*/
+
+.menu ul li:hover {
+  background: #5ca4d6;
+  cursor: pointer;
+}
+
+.menu ul li:active {
+  background: none;
+}
+
 .refresh:hover span,
 .favorite:hover span,
 .size:hover .size-default,
 .cart:hover span {
   color: white;
 }
+
+.refresh:active span,
+.favorite:active span,
+.size:active .size-default,
+.cart:active span {
+  color: #78adc3;
+}
+
 
 /*.size .sub-menu :hover span {
   color: white;
@@ -244,6 +336,11 @@ SIZE SUBMENU
 .sub-menu li:hover i,
 .sub-menu li:hover span {
   color: white;
+}
+
+.sub-menu li:active i,
+.sub-menu li:active span {
+  color: #5ca4d6;
 }
 
 .size:hover .sub-menu {

@@ -7,14 +7,16 @@
   <title></title>
 </head>
 <body>
+
   <ul class="shirt-shop">
 <!-- BLUE SHIRT -->
     <li class="shirt-viewer">
-      <div class="flip">
-        <span class="fa fa-undo" aria-hidden="true">
-      </div>
-      <div class="shirt">
-        <img src="images/blue-front.png" />
+      <submit class="flip">
+        <span class="fa fa-undo" aria-hidden="true"> </span>
+      </submit>
+      <div class="shirt" id="blueshirt">
+        <div class="shirtfront"></div>
+        <div class="shirtback"></div>
       </div>
       <div class="menu">
         <ul>
@@ -66,25 +68,25 @@
             <div class="sub-menu">
               <ul>
                 <li>
-                  <span id="blueshirt">&#9608</span>
+                  <span id="bluecolor">&#9608</span>
                 </li>
                 <li>
-                  <span id="yellowshirt">&#9608</span>
+                  <span id="yellowcolor">&#9608</span>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <span id="pinkshirt">&#9608</span>
+                  <span id="pinkcolor">&#9608</span>
                 </li>
                 <li>
-                  <span id="greenshirt">&#9608</span>
+                  <span id="greencolor">&#9608</span>
                 </li>
               </ul>
               <div class="triangle">
                 <div class="triangle-inset"></div>
               </div>
             </div>
-            <span id="blueshirt">&#9608</span>
+            <span id="bluecolor">&#9608</span>
           </li>
           <li class="cart">
             <span class="fa fa-shopping-bag" aria-hidden="true"></span>
@@ -99,10 +101,11 @@
 <!-- PINK SHIRT -->
     <li class="shirt-viewer">
       <div class="flip">
-        <span class="fa fa-undo" aria-hidden="true">
+        <span class="fa fa-undo" aria-hidden="true"></span>
       </div>
-      <div class="shirt">
-        <img src="images/pink-front.png" />
+      <div class="shirt" id="pinkshirt">
+        <div class="shirtfront"></div>
+        <div class="shirtback"></div>
       </div>
       <div class="menu">
         <ul>
@@ -154,25 +157,25 @@
             <div class="sub-menu">
               <ul>
                 <li>
-                  <span id="blueshirt">&#9608</span>
+                  <span id="bluecolor">&#9608</span>
                 </li>
                 <li>
-                  <span id="yellowshirt">&#9608</span>
+                  <span id="yellowcolor">&#9608</span>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <span id="pinkshirt">&#9608</span>
+                  <span id="pinkcolor">&#9608</span>
                 </li>
                 <li>
-                  <span id="greenshirt">&#9608</span>
+                  <span id="greencolor">&#9608</span>
                 </li>
               </ul>
               <div class="triangle">
                 <div class="triangle-inset"></div>
               </div>
             </div>
-            <span id="pinkshirt">&#9608</span>
+            <span id="pinkcolor">&#9608</span>
           </li>
           <li class="cart">
             <span class="fa fa-shopping-bag" aria-hidden="true"></span>
@@ -189,8 +192,9 @@
       <div class="flip">
         <span class="fa fa-undo" aria-hidden="true"></span>
       </div>
-      <div class="shirt">
-        <img src="images/yellow-front.png" />
+      <div class="shirt" id="yellowshirt">
+        <div class="shirtfront"></div>
+        <div class="shirtback"></div>
       </div>
       <div class="menu">
         <ul>
@@ -242,25 +246,25 @@
             <div class="sub-menu">
               <ul>
                 <li>
-                  <span id="blueshirt">&#9608</span>
+                  <span id="bluecolor">&#9608</span>
                 </li>
                 <li>
-                  <span id="yellowshirt">&#9608</span>
+                  <span id="yellowcolor">&#9608</span>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <span id="pinkshirt">&#9608</span>
+                  <span id="pinkcolor">&#9608</span>
                 </li>
                 <li>
-                  <span id="greenshirt">&#9608</span>
+                  <span id="greencolor">&#9608</span>
                 </li>
               </ul>
               <div class="triangle">
                 <div class="triangle-inset"></div>
               </div>
             </div>
-            <span id="yellowshirt">&#9608</span>
+            <span id="yellowcolor">&#9608</span>
           </li>
           <li class="cart">
             <span class="fa fa-shopping-bag" aria-hidden="true"></span>
@@ -273,11 +277,10 @@
       </div>
     </li>
 
-
-
-
   </ul>
 
-
+  <script src="utils.js"></script>
+  <script src="rotate.js"></script>
+  
 </body>
 </html>
