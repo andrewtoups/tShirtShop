@@ -142,28 +142,6 @@ FLIP BUTTON
   color: #5ca4d6;
 }
 
-/*.flip:active ~ #blueshirt {
-  background: url('images/blue-back.png') center white;
-  background-repeat: no-repeat;
-  background-size: 84%;
-  transform: rotate3d(0, 1, 0 90deg);
-  transition: transform 1s linear;
-}
-
-.flip:active ~ #pinkshirt {
-  background: url('images/pink-back.png') center white;
-  background-repeat: no-repeat;
-  background-size: 84%;
-}
-
-.flip:active ~ #yellowshirt {
-  background: url('images/yellow-back.png') center white;
-  background-repeat: no-repeat;
-  background-size: 84%;
-}*/
-
-
-
 /*
 MENU
 */
@@ -233,6 +211,7 @@ MENU
 
 .menu ul li:active {
   background: none;
+  color: #78adc3
 }
 
 .refresh:hover span,
@@ -362,6 +341,10 @@ SIZE SUBMENU
 .sub-menu li:active span {
   color: #5ca4d6;
 }
+
+/*.sub-menu li:active {
+  background:none;
+}*/
 
 .size:hover .sub-menu {
   bottom: 36px;
