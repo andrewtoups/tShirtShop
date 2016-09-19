@@ -29,21 +29,30 @@ SHIRT MENU
   perspective: 800px;
 }
 
-.shirt {
+.shirt-viewer {
+  float: left;
+  padding-left: 0;
+  margin: 0;
+}
+
+.shirt-box {
   border: solid 2px #5ca4d6;
   width: 262px;
   height: 254px;
   margin: -1px;
   padding: 0px;
-  /*perspective: 800px;*/
+}
+
+.shirt {
+  border: none;
+  width: 262px;
+  height: 254px;
+  margin: -1px;
+  padding: 0px;
   position: relative;
 /*animation code*/
   transform-style: preserve-3d;
   transition: transform 1s;
-}
-
-.shirt .flipped {
-  transform: rotateY( 180deg );
 }
 
 .shirtfront, .shirtback {
@@ -51,11 +60,18 @@ SHIRT MENU
   height: inherit;
   position: absolute;
 /*animation code*/
+  transform-style: preserve-3d;
+  transition: .6s;
   backface-visibility: hidden;
 }
 
-.shirt .shirtback {
-  transform: rotateY( 180deg );
+.shirtfront {
+  /*z-index: 2;*/
+  transform: rotateY(0deg);
+}
+
+.shirtback {
+  transform: rotateY(180deg);
 }
 
 #blueshirt .shirtfront {
@@ -80,6 +96,10 @@ SHIRT MENU
 
 #yellowshirt .shirtback {
   background: url('images/yellow-back.png') center / 84% no-repeat;
+}
+
+.flip:active ~ .shirt-box .shirt {
+  transform: rotateY(180deg);
 }
 
 /*
