@@ -403,4 +403,6 @@ FOOTER
 
 .price {
   float: right;
+  font-weight: bolder;
+  font-size: 23px;
 }
