@@ -6,47 +6,55 @@ GENERAL
   color: #5ca4d6;
 }
 
-.border{
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.border {
   border: solid 2px #5ca4d6;
 }
 
-ul{
+ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
 /*
 SHIRT MENU
 */
 
-.shirt-shop li{
-  float:left;
-  margin:30px;
+main {width: 100vw;}
+
+.shirt-shop {
+  float: right;
+  width: 94%;
+}
+
+.shirt-shop li {
+  float: left;
   position: relative;
 }
 
 .shirt-viewer {
-  perspective: 800px;
-}
-
-.shirt-viewer {
-  float: left;
   padding-left: 0;
-  margin: 0;
+  perspective: 800px;
+  transform: scale(1);
+  width: 15vw;
+  height: 18vw;
+  margin: 0 3vw 7vw 3vw;
 }
 
 .shirt-box {
   border: solid 2px #5ca4d6;
-  width: 262px;
-  height: 254px;
-  margin: -1px;
-  padding: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .shirt {
   border: none;
-  width: 262px;
-  height: 254px;
+  width: 100%;
+  height: 100%;
   margin: -1px;
   padding: 0px;
   position: relative;
@@ -74,27 +82,27 @@ SHIRT MENU
   transform: rotateY(180deg);
 }
 
-#blueshirt .shirtfront {
+.shirt-viewer.blueshirt .shirtfront {
   background: url('images/blue-front.png') center / 84% no-repeat;
 }
 
-#blueshirt .shirtback {
+.shirt-viewer.blueshirt .shirtback {
   background: url('images/blue-back.png') center / 84% no-repeat;
 }
 
-#pinkshirt .shirtfront {
+.shirt-viewer.pinkshirt .shirtfront {
   background: url('images/pink-front.png') center / 84% no-repeat;
 }
 
-#pinkshirt .shirtback {
+.shirt-viewer.pinkshirt .shirtback {
   background: url('images/pink-back.png') center / 84% no-repeat;
 }
 
-#yellowshirt .shirtfront {
+.shirt-viewer.yellowshirt .shirtfront {
   background: url('images/yellow-front.png') center / 84% no-repeat;
 }
 
-#yellowshirt .shirtback {
+.shirt-viewer.yellowshirt .shirtback {
   background: url('images/yellow-back.png') center / 84% no-repeat;
 }
 
@@ -112,30 +120,32 @@ FLIP BUTTON
   height: 23px;
   width: 23px;
   position: absolute;
-  margin:-1px;
+  margin: 0;
   right: 0;
   z-index: 1;
+  text-align: center;
+  line-height: 1.3;
 }
 
 .flip span {
-  margin: 9% 17%;
-  color: #5ca4d6;
+  /*margin: 9% 17%;
+  color: #5ca4d6;*/
 }
 
 /*FLIP ANIMATIONS*/
 
 .flip:hover {
   background: #5ca4d6;
-  color: white;
+  color: none;
 }
 
 .flip:hover span {
-  color: white;
+  color: none;
   cursor: pointer;
 }
 
 .flip:active {
-  background: white;
+  background: none;
 }
 
 .flip:active span {
@@ -146,60 +156,80 @@ FLIP BUTTON
 MENU
 */
 
+.menu {
+}
 .menu ul li {
   border: solid 2px #5ca4d6;
   color: #5ca4d6;
-  margin: -1px;
-  width: 54px;
+  margin: -2px 0;
+  width: 20%;
   height: 40px;
+  text-align: center;
+  line-height: 2.3;
+  border-left: solid 1px #5ca4d6;
+  border-right: solid 1px #5ca4d6;
+  /* margin-left: -1px; */
+  /* margin-right: 1px; */
 }
 
-.refresh span{
+.menu ul li:first-child {
+  border-left: solid 2px #5ca4d6;
+}
+
+.menu ul li:last-child {
+  border-right: solid 2px #5ca4d6;
+}
+
+/*.refresh span{
   margin: 20% 37%;
 }
 
 .favorite span{
   margin: 20% 34%;
-}
+}*/
 
 .size span {
   display: block;
   font-family: helvetica;
   font-weight: bold;
-  margin:19% 32%;
+  /*margin:19% 32%;*/
 }
 
 .color span {
-  /*transform: scale(1.2);*/
-  position: absolute;
-  top: 8px;
-  left: 15px;
-  border: solid thin white;
-  box-sizing: content-box;
-  padding: 0;
+  background: white;
+  border: thin white solid;
   line-height: 1;
   border-width: 2px;
+  font-size: 15px;
 }
 
-#bluecolor {
+.bluecolor,
+.shirt-viewer.blueshirt .default-color,
+.shirt-viewer.blueshirt .color:hover .default-color {
   color: #72bbe9;
 }
 
-#pinkcolor {
+.pinkcolor,
+.shirt-viewer.pinkshirt .default-color,
+.shirt-viewer.pinkshirt .color:hover .default-color {
   color: #e577aa;
 }
 
-#yellowcolor {
+.yellowcolor,
+.shirt-viewer.yellowshirt .default-color,
+.shirt-viewer.yellowshirt .color:hover .default-color {
   color: #e3b076;
 }
 
-#greencolor {
+.greencolor,
+.shirt-viewer.greenshirt .default-color,
+.shirt-viewer.greenshirt .color:hover .default-color {
   color: #78adc3;
 }
 
 .cart span {
   transform: scale(1.2);
-  margin:17% 35%;
+  /*margin:17% 35%;*/
 }
 
 /*menu animation*/
@@ -228,7 +258,6 @@ MENU
   color: #78adc3;
 }
 
-
 /*.size .sub-menu :hover span {
   color: white;
 }*/
@@ -245,7 +274,8 @@ SUBMENU
   border-color: #5ca4d6 transparent transparent transparent;
   position: absolute;
   bottom: -10px;
-  left: 24px;
+  padding-50%: 24px;
+  margin: 0 33%;
 }
 
 .triangle-inset{
@@ -263,7 +293,7 @@ SUBMENU
   background: white;
   border: solid;
   border-width: 2px;
-  width: 74px;
+  width: 200%;
 }
 /*
 SIZE SUBMENU
@@ -271,7 +301,7 @@ SIZE SUBMENU
 .size .sub-menu {
   position:absolute;
   bottom: 60px;
-  left: -11px;
+  margin-left: -46%;
   opacity: 0;
   visibility: hidden;
   transition: all 250ms ease;
@@ -279,22 +309,22 @@ SIZE SUBMENU
 
 .size .sub-menu ul li {
   border: none;
-  width: 72px;
+  width: 100%;
   font-size: 20px;
 }
 
 .size ul li span {
   color: #5ca4d6;
   margin:0;
-  float: left;
   position: absolute;
+  bottom: -3px;
 }
 
 .size .sub-menu .size-label {
   font-size: 8px;
   position: absolute;
   text-transform: uppercase;
-  top:6px;
+  top: 14px;
   left: 11px;
 }
 
@@ -302,43 +332,42 @@ SIZE SUBMENU
   transform: scale(1.8);
   position: absolute;
   top: 3px;
-  left: 11px;
+  margin: 0px 14%;
 }
 
 .size .extra-large .size-label {
   position: absolute;
-  left:9;
+  left:9px;
 }
 
 .size .large {
   transform: scale(1.5);
   position: absolute;
   top: 8px;
-  left: 15px;
+  margin: 0px 20%;
 }
 
 .size .medium {
   transform: scale(1.2);
   position: absolute;
   top: 8px;
-  left: 19px;
+  margin: 0px 26%;
 }
 
 .size .small {
   transform: scale(.9);
   position: absolute;
   top: 6px;
-  left: 23px;
+  margin: 0 32%;
 }
 
 /*SIZE SUB-MENU ANIMATION*/
-.sub-menu li:hover i,
-.sub-menu li:hover span {
-  color: white;
+.size .sub-menu li:hover span {
+  color: white
+  /*z-index: 0;*/
 }
 
-.sub-menu li:active i,
-.sub-menu li:active span {
+.size .sub-menu li:active span {
   color: #5ca4d6;
 }
 
@@ -358,22 +387,20 @@ COLOR SUBMENU
 .color .sub-menu {
   position:absolute;
   bottom: 60px;
-  left: -13px;
+  margin: 0 -51%;
   opacity: 0;
   visibility: hidden;
   transition: all 250ms ease;
 }
 
 .color .sub-menu span {
-  transform: scale(1.7);
-  position: absolute;
-  top: 9px;
-  left: 9px;
+  font-size: 17px;
+  line-height: initial;
 }
 
 .color .sub-menu ul li {
   border: none;
-  width: 37px;
+  width: 100%;
 }
 
 /*COLOR MENU ANIMATION*/
@@ -384,6 +411,10 @@ COLOR SUBMENU
   visibility: visible;
 }
 
+/*.color .sub-menu li:hover {
+  background: none;
+}*/
+
 /*
 FOOTER
 */
@@ -391,10 +422,10 @@ FOOTER
 .footer{
   font-family: helvetica;
   font-weight: lighter;
-  line-height: 33px;
-  font-size: 20px;
+  line-height: 25px;
+  font-size: 15px;
   color: #5ca4d6;
-  margin: 0 10px;
+  margin: 0 3px;
 }
 
 .shirt-name {
@@ -404,5 +435,34 @@ FOOTER
 .price {
   float: right;
   font-weight: bolder;
-  font-size: 23px;
+}
+
+/*
+MOBILE BREAKPOINTS
+*/
+
+@media only screen and (max-width: 1000px) {
+  .shirt-viewer {
+      width: 20vw;
+      height: 24vw;
+      margin-bottom: 10vw;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .shirt-viewer {
+      width: 28vw;
+      height: 36vw;
+      margin-bottom: 15vw;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .shirt-viewer {
+    width: 70vw;
+    height: 85vw;
+    margin-bottom: 30vw;
+  }
 }
